@@ -16,7 +16,7 @@ const Navbar = ({ navOpen }) => {
   const initActiveBox = () => {
     activeBox.current.style.top = lastActiveLink.current.offsetTop + 'px';
 
-    activeBox.current.style.left = lastActiveLink.current.offsetleft + 'px';
+    activeBox.current.style.left = lastActiveLink.current.offsetLeft + 'px';
 
     activeBox.current.style.width = lastActiveLink.current.offsetWidth + 'px';
 
@@ -24,6 +24,7 @@ const Navbar = ({ navOpen }) => {
   };
 
   useEffect(initActiveBox, []);
+  window.addEventListener('resize', initActiveBox);
 
   const activeCurrentLink = (event) => {
     lastActiveLink.current?.classList.remove('active');
@@ -32,7 +33,7 @@ const Navbar = ({ navOpen }) => {
 
     activeBox.current.style.top = event.target.offsetTop + 'px';
 
-    activeBox.current.style.left = event.target.offsetleft + 'px';
+    activeBox.current.style.left = event.target.offsetLeft + 'px';
 
     activeBox.current.style.width = event.target.offsetWidth + 'px';
 

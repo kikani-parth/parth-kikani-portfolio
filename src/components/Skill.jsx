@@ -4,10 +4,6 @@
  */
 
 /**
- * Node modules
- */
-
-/**
  * Components
  */
 import SkillCard from './SkillCard';

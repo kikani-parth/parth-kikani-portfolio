@@ -116,7 +116,26 @@ const Contact = () => {
           </div>
         </div>
 
-        <form action="" method="POST" className="xl:pl-10 2xl:pl-20">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          className="xl:pl-10 2xl:pl-20"
+        >
+          {/* web3 form public access key */}
+          <input
+            type="hidden"
+            name="access_key"
+            value="2b0a4294-0682-483b-8edd-48d39be7ccff"
+          />
+
+          {/*  Honeypot Spam Protection */}
+          <input
+            type="checkbox"
+            name="botcheck"
+            className="hidden"
+            style={{ display: 'none' }}
+          />
+
           <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
             <div className="mb-4">
               <label htmlFor="name" className="label">

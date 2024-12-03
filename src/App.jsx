@@ -4,6 +4,11 @@
  */
 
 /**
+ * Node modules
+ */
+import { ReactLenis } from 'lenis/react';
+
+/**
  * Components
  */
 import Header from './components/Header';
@@ -15,7 +20,7 @@ import Contact from './components/Contact';
 
 const App = () => {
   return (
-    <>
+    <ReactLenis root>
       <Header />
       <main>
         <Hero />
@@ -24,7 +29,7 @@ const App = () => {
         <Work />
         <Contact />
       </main>
-    </>
+    </ReactLenis>
   );
 };
 

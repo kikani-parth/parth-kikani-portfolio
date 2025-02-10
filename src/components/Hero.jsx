@@ -10,7 +10,7 @@
 /**
  * Components
  */
-import { ButtonPrimary, ButtonOutline } from './Button';
+import { ButtonPrimary } from './Button';
 
 const Hero = () => {
   return (

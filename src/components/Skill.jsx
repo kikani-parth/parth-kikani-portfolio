@@ -37,7 +37,7 @@ const skillItems = [
   {
     imgSrc: '/images/typescript.svg',
     label: 'TypeScript',
-    level: 'Beginner - Intermediate',
+    level: 'Intermediate - Advanced',
   },
   {
     imgSrc: '/images/nodejs.svg',

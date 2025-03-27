@@ -32,6 +32,12 @@ const works = [
     projectLink: 'https://github.com/kikani-parth/netflix-clone',
   },
   {
+    imgSrc: '/images/bookshelf.png',
+    title: 'Bookshelf',
+    tags: ['Full-Stack', 'Google Books API', 'Mobile'],
+    projectLink: 'https://github.com/kikani-parth/bookshelf',
+  },
+  {
     imgSrc: '/images/weather-station.png',
     title: 'Weather Station',
     tags: ['IoT', 'FreeRTOS', 'Data Visualization'],

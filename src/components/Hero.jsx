@@ -44,9 +44,15 @@ const Hero = () => {
             <ButtonPrimary
               href="/Parth_Kikani_CV.pdf"
               target="_blank"
+              label="Checkout my CV"
+              icon="north_east"
+            />
+            {/* <ButtonPrimary
+              href="/Parth_Kikani_CV.pdf"
+              target="_blank"
               label="Download CV"
               icon="download"
-            />
+            /> */}
             {/* <ButtonOutline
               href="#about"
               label="Scroll down"

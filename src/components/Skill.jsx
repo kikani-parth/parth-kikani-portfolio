@@ -1,5 +1,5 @@
 /**
- * @copyright 2024 Parth Kikani
+ * @copyright 2025 Parth Kikani
  * @license Apache-2.0
  */
 
@@ -9,26 +9,6 @@
 import SkillCard from './SkillCard';
 
 const skillItems = [
-  {
-    imgSrc: '/images/c.svg',
-    label: 'C',
-    level: 'Intermediate',
-  },
-  {
-    imgSrc: '/images/c++.svg',
-    label: 'C++',
-    level: 'Intermediate',
-  },
-  {
-    imgSrc: '/images/html.svg',
-    label: 'HTML',
-    level: 'Intermediate',
-  },
-  {
-    imgSrc: '/images/css3.svg',
-    label: 'CSS',
-    level: 'Intermediate',
-  },
   {
     imgSrc: '/images/javascript.svg',
     label: 'JavaScript',
@@ -55,6 +35,11 @@ const skillItems = [
     level: 'Intermediate - Advanced',
   },
   {
+    imgSrc: '/images/postgresql.svg',
+    label: 'PostgreSQL',
+    level: 'Intermediate',
+  },
+  {
     imgSrc: '/images/react.svg',
     label: 'React',
     level: 'Intermediate - Advanced',
@@ -63,6 +48,26 @@ const skillItems = [
     imgSrc: '/images/react-native.svg',
     label: 'React Native',
     level: 'Intermediate - Advanced',
+  },
+  {
+    imgSrc: '/images/aws.svg',
+    label: 'AWS',
+    level: 'Cloud Practitioner Level',
+  },
+  {
+    imgSrc: '/images/python.svg',
+    label: 'Python',
+    level: 'Intermediate',
+  },
+  {
+    imgSrc: '/images/c.svg',
+    label: 'C',
+    level: 'Intermediate',
+  },
+  {
+    imgSrc: '/images/c++.svg',
+    label: 'C++',
+    level: 'Intermediate',
   },
 ];
 

@@ -49,7 +49,7 @@ const About = () => {
             Learning AWS and exploring how cloud services can make applications
             more scalable, efficient, and resilient.
           </p>
-          <p className="text-zinc-300 mb-8 md:text-lg">
+          <p className="text-zinc-300 md:text-lg">
             <span className="block font-semibold text-sky-400 mb-1">
               Outside of tech
             </span>
@@ -57,7 +57,7 @@ const About = () => {
             or diving into video games. These keep me balanced and curious
             beyond the code.
           </p>
-          <div className="flex flex-wrap items-center gap-4 md:gap-7">
+          {/* <div className="flex flex-wrap items-center gap-4 md:gap-7">
             {aboutItems.map(({ label, number }, key) => (
               <div key={key}>
                 <div className="flex items-center md:mb-2">
@@ -80,7 +80,7 @@ const About = () => {
               height={30}
               className="ml-auto md:w-[40px] md:h-[40px]"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

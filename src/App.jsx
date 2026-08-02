@@ -1,25 +1,16 @@
 /**
- * @copyright 2025 Parth Kikani
+ * @copyright 2026 Parth Kikani
  * @license Apache-2.0
  */
 
-/**
- * Node modules
- */
 import { ReactLenis } from 'lenis/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { Analytics } from '@vercel/analytics/react';
 
-/**
- * Register gsap plugins
- */
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-/**
- * Components
- */
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';

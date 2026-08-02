@@ -1,15 +1,8 @@
 /**
- * @copyright 2025 Parth Kikani
+ * @copyright 2026 Parth Kikani
  * @license Apache-2.0
  */
 
-/**
- * Node modules
- */
-
-/**
- * Components
- */
 import ProjectCard from './ProjectCard';
 
 const works = [

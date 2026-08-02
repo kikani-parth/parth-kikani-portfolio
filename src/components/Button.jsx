@@ -1,20 +1,9 @@
 /**
- * @copyright 2025 Parth Kikani
+ * @copyright 2026 Parth Kikani
  * @license Apache-2.0
  */
 
-/**
- * Node modules
- */
 import PropTypes from 'prop-types';
-
-/**
- * Components
- */
-
-/**
- * Primary Button
- */
 
 const ButtonPrimary = ({ href, target = '_self', label, icon, classes }) => {
   if (href) {
@@ -51,10 +40,6 @@ ButtonPrimary.propTypes = {
   icon: PropTypes.string,
   classes: PropTypes.string,
 };
-
-/**
- * Outline Button
- */
 
 const ButtonOutline = ({ href, target = '_self', label, icon, classes }) => {
   if (href) {

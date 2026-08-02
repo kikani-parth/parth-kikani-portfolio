@@ -1,11 +1,8 @@
 /**
- * @copyright 2025 Parth Kikani
+ * @copyright 2026 Parth Kikani
  * @license Apache-2.0
  */
 
-/**
- * Node modules
- */
 import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 

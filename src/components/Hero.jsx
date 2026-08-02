@@ -1,15 +1,8 @@
 /**
- * @copyright 2025 Parth Kikani
+ * @copyright 2026 Parth Kikani
  * @license Apache-2.0
  */
 
-/**
- * Node modules
- */
-
-/**
- * Components
- */
 import { ButtonPrimary } from './Button';
 
 const Hero = () => {
@@ -47,11 +40,6 @@ const Hero = () => {
               label="Checkout my CV"
               icon="north_east"
             />
-            {/* <ButtonOutline
-              href="#about"
-              label="Scroll down"
-              icon="arrow_downward"
-            /> */}
           </div>
         </div>
         <div className="hidden lg:block">
@@ -61,7 +49,6 @@ const Hero = () => {
               width={380}
               height={548}
               alt="Parth Kikani"
-              //   className="w-full"
             />
           </figure>
         </div>

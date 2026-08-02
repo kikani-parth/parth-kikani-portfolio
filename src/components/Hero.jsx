@@ -32,27 +32,21 @@ const Hero = () => {
               <span className="relative w-2 h-2 rounded-full bg-emerald-400">
                 <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
               </span>
-              Available for work
+              Open to opportunities
             </div>
           </div>
 
           <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
-            Building Intuitive Web and Mobile Experiences
+            Building and Testing GenAI-Powered Web &amp; Mobile Experiences
           </h2>
 
           <div className="flex items-center gap-3 ">
             <ButtonPrimary
-              href="https://drive.google.com/file/d/1xbSvrUm2hPiQsVZ4x80iRBS9JWXfOIbn/view?usp=sharing"
+              href="/Parth_Kikani_CV.pdf"
               target="_blank"
               label="Checkout my CV"
               icon="north_east"
             />
-            {/* <ButtonPrimary
-              href="/Parth_Kikani_CV.pdf"
-              target="_blank"
-              label="Download CV"
-              icon="download"
-            /> */}
             {/* <ButtonOutline
               href="#about"
               label="Scroll down"

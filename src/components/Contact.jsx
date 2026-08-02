@@ -6,6 +6,7 @@
 /**
  * Node modules
  */
+import { useState } from 'react';
 
 /**
  * Components
@@ -49,24 +50,6 @@ const socialLinks = [
     alt: 'LinkedIn',
   },
   {
-    href: 'https://x.com/kikani_parth02',
-    icon: (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M6.25 3C4.46403 3 3 4.46403 3 6.25V17.75C3 19.536 4.46403 21 6.25 21H17.75C19.536 21 21 19.536 21 17.75V6.25C21 4.46403 19.536 3 17.75 3H6.25ZM6.25 4.5H17.75C18.725 4.5 19.5 5.27497 19.5 6.25V17.75C19.5 18.725 18.725 19.5 17.75 19.5H6.25C5.27497 19.5 4.5 18.725 4.5 17.75V6.25C4.5 5.27497 5.27497 4.5 6.25 4.5ZM6.91406 7L10.7822 12.5283L6.91113 17H7.93262L11.2344 13.1758L13.9102 17H17.1289L13.0127 11.1172L16.5684 7H15.5684L12.5615 10.4717L10.1328 7H6.91406ZM8.46777 7.84766H9.74902L15.5752 16.1523H14.2939L8.46777 7.84766Z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
-    alt: 'Twitter X',
-  },
-  {
     href: 'mailto:parthkikani02@gmail.com',
     icon: (
       <svg
@@ -89,6 +72,32 @@ const socialLinks = [
 ];
 
 const Contact = () => {
+  const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    setStatus('submitting');
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        form.reset();
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  };
+
   return (
     <section id="contact" className="section">
       <div className="container lg:grid lg:grid-cols-2 lg:items-stretch mb-10">
@@ -98,11 +107,16 @@ const Contact = () => {
           </h2>
 
           <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">
-            I&apos;m currently available to take on new projects/jobs, so feel
-            free to send me a message to start our exciting journey together!
+            I&apos;m always happy to connect, whether it&apos;s about
+            interesting engineering problems, potential collaborations, or
+            just a good conversation about tech.
           </p>
 
-          <div className="flex items-center gap-2 mt-auto">
+          <p className="text-sm font-medium text-zinc-400 mb-3 reveal-up">
+            Or find me here
+          </p>
+
+          <div className="flex items-center gap-2">
             {socialLinks.map(({ href, icon }, key) => (
               <a
                 key={key}
@@ -120,6 +134,7 @@ const Contact = () => {
           action="https://api.web3forms.com/submit"
           method="POST"
           className="xl:pl-10 2xl:pl-20"
+          onSubmit={handleSubmit}
         >
           {/* web3 form public access key */}
           <input
@@ -186,10 +201,23 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="btn btn-primary [&]:max-w-full w-full justify-center reveal-up"
+            disabled={status === 'submitting'}
+            className="btn btn-primary [&]:max-w-full w-full justify-center reveal-up disabled:opacity-60"
           >
-            Submit
+            {status === 'submitting' ? 'Sending...' : 'Submit'}
           </button>
+
+          {status === 'success' && (
+            <p className="text-emerald-400 text-sm mt-3 reveal-up">
+              Thanks for reaching out! I&apos;ll get back to you soon.
+            </p>
+          )}
+
+          {status === 'error' && (
+            <p className="text-red-400 text-sm mt-3 reveal-up">
+              Something went wrong. Please try again or email me directly.
+            </p>
+          )}
         </form>
       </div>
     </section>
